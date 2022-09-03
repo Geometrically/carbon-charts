@@ -247,7 +247,7 @@ export class Ruler extends Component {
 		};
 
 		// Debounce mouseMoveCallback if there are more than 100 datapoints
-		if (displayData.length > 100) {
+		if (displayData.length > 10000) {
 			const debounceThreshold = (displayData.length % 50) * 12.5;
 
 			mouseMoveCallback = Tools.debounceWithD3MousePosition(
